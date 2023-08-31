@@ -30,10 +30,12 @@ public class MapManager : MonoBehaviour
             Vector3Int gridPosition = map.WorldToCell(mousePosition);
 
             TileBase clickedTile = map.GetTile(gridPosition);
+            
+            if(clickedTile){
+                String tileContent = dataFromTiles[clickedTile].contents;
+                print("Content of tile: " + tileContent);
+            }
 
-            String tileContent = dataFromTiles[clickedTile].contents;
-
-            print("Content of tile: " + tileContent);
         }
     }
 }

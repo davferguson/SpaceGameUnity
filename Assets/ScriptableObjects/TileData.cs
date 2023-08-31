@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "ScriptableObject/TileData")]
 public class TileData : ScriptableObject
 {
     public TileBase[] tiles;
