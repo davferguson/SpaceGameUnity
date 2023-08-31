@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49935177653408241b7217920641a48b, type: 3}
+  m_Name: IronTileData
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 2fbcbed08364f964187eca54e05fdac5, type: 2}
+  - {fileID: 11400000, guid: 7aaa2ed65ecd7874c8baa8a876fd7349, type: 2}
+  - {fileID: 11400000, guid: 5c397054465e1af49ac649b5b9b405e6, type: 2}
+  - {fileID: 11400000, guid: 9472d6c350ae3384b9a53a2c1e55e40b, type: 2}
+  - {fileID: 11400000, guid: db87011a2feafca47828e926dbd913ae, type: 2}
+  - {fileID: 11400000, guid: ab1cc0b1d68845942be117d64deef8d3, type: 2}
+  - {fileID: 11400000, guid: 1ab36eaf0e0ba204fad7bdcd90d30ca1, type: 2}
+  - {fileID: 11400000, guid: f1a37f7d2f6372e4bab9d796376c00d3, type: 2}
+  - {fileID: 11400000, guid: f5bb58e9c483be34f872e4bd7a67ecfa, type: 2}
+  - {fileID: 11400000, guid: e820396861fe2924abf86a0c2e5203f2, type: 2}
+  - {fileID: 11400000, guid: 192fad9e6423f2f49ba0e41c69078500, type: 2}
+  - {fileID: 11400000, guid: c160c565179f19541bbc93508d302e1f, type: 2}
+  - {fileID: 11400000, guid: 42539a82b6ce4504282c3136cef53407, type: 2}
+  contents: iron

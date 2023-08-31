@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49935177653408241b7217920641a48b, type: 3}
+  m_Name: StoneTileData
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 9b5e2d8cd2c7db04fb277a7ebe7afe95, type: 2}
+  - {fileID: 11400000, guid: 4d7718181909b30468c56a5797c6708c, type: 2}
+  - {fileID: 11400000, guid: 1d90326b6e9de9c41994274074180393, type: 2}
+  - {fileID: 11400000, guid: 24a28a10019a8b045942654280b54980, type: 2}
+  - {fileID: 11400000, guid: 814c504f42466ae4c81f9ea1d8cd8b18, type: 2}
+  - {fileID: 11400000, guid: 05a5e5548a0a9f546bdae550a6968219, type: 2}
+  - {fileID: 11400000, guid: d04b07a45b8b07e4482669f2fb812acc, type: 2}
+  - {fileID: 11400000, guid: e9654efd2edc75f40bca11f338f34dff, type: 2}
+  - {fileID: 11400000, guid: 9f6420c53d50811418191ee1aff128e2, type: 2}
+  - {fileID: 11400000, guid: ee8b01bce380dbd41858bbd66a27e215, type: 2}
+  - {fileID: 11400000, guid: 313608ea7986e6a4885666bc9f41b678, type: 2}
+  - {fileID: 11400000, guid: 3d5845e82debeec4bad8e5cdfafb432f, type: 2}
+  - {fileID: 11400000, guid: bdda2d4659b4da8489d9683b31f9ac8e, type: 2}
+  contents: stone
