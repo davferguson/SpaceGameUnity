@@ -22,7 +22,11 @@ public class PlayerMovement : MonoBehaviour
     {
         inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        animator.SetFloat("Horizontal", inputVector.x);
+        if(inputVector.x != 0){
+            animator.SetFloat("LastDirection", inputVector.x);
+            animator.SetFloat("Horizontal", inputVector.x);
+        }
+        
         animator.SetFloat("Speed", inputVector.sqrMagnitude);
     }
 
