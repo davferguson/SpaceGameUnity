@@ -10,6 +10,7 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private TileBase highlightedTile;
     [SerializeField] private Tilemap mainTilemap;
     [SerializeField] private Tilemap tempTilemap;
+    [SerializeField] private GameObject lootPrefab;
 
     private Vector3Int playerPos;
     private Vector3Int highlightedTilePos;
@@ -88,7 +89,11 @@ public class BuildingSystem : MonoBehaviour
         tempTilemap.SetTile(position, null);
         isHighlighted = false;
 
-        // TileData tileData = mainTilemap.GetTile<TileData>(position);
+        TileData tileData = mainTilemap.GetTile<TileData>(position);
         mainTilemap.SetTile(position, null);
+
+        Vector3 centerPos = mainTilemap.GetCellCenterWorld(position);
+        GameObject loot = Instantiate(lootPrefab, centerPos, Quaternion.identity);
+        loot.GetComponent<LootController>().Initialize(tileData.item);
     }
 }
