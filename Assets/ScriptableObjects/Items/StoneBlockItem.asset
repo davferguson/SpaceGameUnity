@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: 718832238, guid: 80cfa36178a832e43af8f3d08ea06ac8, type: 3}
   itemType: 1
   actionType: 0
-  buildRange: {x: 3, y: 3}
+  buildRange: {x: 5, y: 5}

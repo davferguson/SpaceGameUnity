@@ -241,7 +241,7 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: -1, y: 0, z: 0}
     m_RuleTransform: 0
-  item: {fileID: 11400000, guid: adfb14d9b6e5e4444b75e70d2c397e58, type: 2}
+  item: {fileID: 11400000, guid: 4e2e85e6ed278c641ac91cd742fe5da0, type: 2}
   tiles:
   - {fileID: 11400000, guid: 2fbcbed08364f964187eca54e05fdac5, type: 2}
   - {fileID: 11400000, guid: 7aaa2ed65ecd7874c8baa8a876fd7349, type: 2}

@@ -10,7 +10,7 @@ public class Item : ScriptableObject
     public Sprite icon;
     public ItemType itemType;
     public ActionType actionType;
-    public Vector2Int buildRange = new Vector2Int(3,3);
+    public Vector2Int buildRange = new Vector2Int(5,5);
 }
 
 public enum ItemType{
