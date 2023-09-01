@@ -172,3 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6299c3508b6edca4884b38d86d41130d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: c68f0be3712c5464c9a1176d43a65daa, type: 2}
+  highlightedTile: {fileID: 11400000, guid: 8c62f4a83ba269b439389d2e16d4492a, type: 2}
+  mainTilemap: {fileID: 0}
+  tempTilemap: {fileID: 0}
