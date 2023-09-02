@@ -5,14 +5,17 @@ using UnityEngine;
 public class LootController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private CircleCollider2D collider;
+    [SerializeField] private new CircleCollider2D collider;
     [SerializeField] private float moveSpeed;
+    private InventoryManager inventoryManager;
 
     private Item item;
 
     public void Initialize(Item item){
         this.item = item;
         sr.sprite = item.icon;
+        GameObject inventoryGO = GameObject.FindWithTag("InventoryManager");
+        inventoryManager = inventoryGO.GetComponent<InventoryManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other){
@@ -28,7 +31,7 @@ public class LootController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             yield return 0;
         }
-
+        inventoryManager.AddItem(item);
         Destroy(gameObject);
     }
 }

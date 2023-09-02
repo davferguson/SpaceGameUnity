@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 784095309523390984}
   - component: {fileID: 5780343055677671805}
   - component: {fileID: 3936823762784194004}
-  - component: {fileID: 3256708316922110526}
+  - component: {fileID: 8828878559874320313}
   m_Layer: 5
   m_Name: InventoryItem
   m_TagString: Untagged
@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 16, y: 0}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5780343055677671805
 CanvasRenderer:
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3256708316922110526
+--- !u!114 &8828878559874320313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0f5f37c5bb9324598f6019e16fa032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 3936823762784194004}
+  item: {fileID: 0}
 --- !u!1 &5472545091037565281
 GameObject:
   m_ObjectHideFlags: 0

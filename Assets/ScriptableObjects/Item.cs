@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class Item : ScriptableObject
     public ItemType itemType;
     public ActionType actionType;
     public Vector2Int buildRange = new Vector2Int(5,5);
+    public bool isStackable = true;
 }
 
 public enum ItemType{
