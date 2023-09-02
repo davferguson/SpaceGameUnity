@@ -10,4 +10,5 @@ public class TileData : RuleTile
     public Item item;
     public TileBase[] tiles;
     public String contents;
+    public int durability;
 }

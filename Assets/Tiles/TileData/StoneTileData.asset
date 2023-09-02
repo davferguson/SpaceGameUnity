@@ -778,3 +778,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdda2d4659b4da8489d9683b31f9ac8e, type: 2}
   - {fileID: 11400000}
   contents: stone
+  durability: -20

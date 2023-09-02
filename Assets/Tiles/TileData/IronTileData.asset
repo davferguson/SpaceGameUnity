@@ -258,3 +258,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42539a82b6ce4504282c3136cef53407, type: 2}
   - {fileID: 11400000}
   contents: iron
+  durability: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -15,7 +16,11 @@ public class BuildingSystem : MonoBehaviour
     private Vector3Int playerPos;
     private Vector3Int highlightedTilePos;
     private bool isHighlighted;
+    private Dictionary<Vector3, TileInfo> tileInfos = new Dictionary<Vector3, TileInfo>();
 
+    private void Awake(){
+        InitializeTileDictionary(mainTilemap);
+    }
     private void Update(){
         playerPos = mainTilemap.WorldToCell(transform.position);
 
@@ -28,6 +33,15 @@ public class BuildingSystem : MonoBehaviour
                 if(item.itemType == ItemType.Tool){
                     BreakTile(highlightedTilePos);
                 }
+            }
+        }
+    }
+
+    private void InitializeTileDictionary(Tilemap tilemap){
+        foreach(Vector3Int pos in tilemap.cellBounds.allPositionsWithin){
+            if(tilemap.HasTile(pos)){
+                TileInfo tileInfo = new TileInfo();
+                tileInfos.Add(tilemap.CellToWorld(pos), tileInfo);
             }
         }
     }
@@ -86,11 +100,23 @@ public class BuildingSystem : MonoBehaviour
     }
 
     private void BreakTile(Vector3Int position){
-        tempTilemap.SetTile(position, null);
-        isHighlighted = false;
 
         TileData tileData = mainTilemap.GetTile<TileData>(position);
-        mainTilemap.SetTile(position, null);
+
+        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		Vector3Int worldPoint = new Vector3Int(Mathf.FloorToInt(point.x), Mathf.FloorToInt(point.y), 0);
+        TileInfo curTileInfo;
+        if(tileInfos.TryGetValue(worldPoint, out curTileInfo)){
+            curTileInfo.durability--;
+            curTileInfo.Speak();
+            if(curTileInfo.durability <= 0){
+                tempTilemap.SetTile(position, null);
+                isHighlighted = false;
+                mainTilemap.SetTile(position, null);
+            }
+        }
+
+        // mainTilemap.SetTile(position, null);
 
         Vector3 centerPos = mainTilemap.GetCellCenterWorld(position);
         GameObject loot = Instantiate(lootPrefab, centerPos, Quaternion.identity);
