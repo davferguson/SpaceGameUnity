@@ -31,7 +31,9 @@ public class LootController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             yield return 0;
         }
-        inventoryManager.AddItem(item);
-        Destroy(gameObject);
+        if(inventoryManager.AddItem(item)){
+            Destroy(gameObject);
+        }
+        
     }
 }
