@@ -22,11 +22,27 @@ public class PlayerMovement : MonoBehaviour
     {
         inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        if(inputVector.x != 0){
-            animator.SetFloat("LastDirection", inputVector.x);
-            animator.SetFloat("Horizontal", inputVector.x);
-        }
+        // if(inputVector.x != 0){
+        //     animator.SetFloat("LastDirection", inputVector.x);
+        //     animator.SetFloat("Horizontal", inputVector.x);
+        //     animator.SetFloat("Vertical", inputVector.y);
+        // }
+        // if(inputVector.y != 0){
+        //     animator.SetFloat("Vertical", inputVector.y);
+        // }
+
+        animator.SetFloat("Horizontal", inputVector.x);
+        animator.SetFloat("Vertical", inputVector.y);
         
+        if(inputVector.x != 0){
+            animator.SetFloat("LastHorizontal", inputVector.x);
+            animator.SetFloat("LastVertical", 0);
+        }
+        if(inputVector.y != 0){
+            animator.SetFloat("LastVertical", inputVector.y);
+            animator.SetFloat("LastHorizontal", 0);
+        }
+
         animator.SetFloat("Speed", inputVector.sqrMagnitude);
     }
 
